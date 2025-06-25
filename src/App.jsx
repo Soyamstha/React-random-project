@@ -31,12 +31,12 @@ function Calculator() {
     }
   };
   return (
-    <div className='text-white'>
-      <div>
+    <div>
+      <div class='screen'>
         <label>Input:</label>
         <input value={input}></input>
       </div>
-      <div>
+      <div class='screen'>
         <label>Result:</label>
         <input value={result}></input>
       </div>
