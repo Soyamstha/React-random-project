@@ -56,6 +56,7 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    gap: 16px;
     transition: background-color 0.2s ease;
 }
 .row1{
