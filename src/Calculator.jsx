@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import './App.css';
-// import React from 'react';
-import { useNavigate } from 'react-router-dom';
 export default function Calculator() {
   return (
     <div>
