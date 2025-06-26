@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './App.css';
+import './calculator.css';
 export default function Calculator() {
   return (
     <div>
@@ -39,7 +39,7 @@ function MyCalcutator() {
         <label>Result:</label>
         <input value={result}></input>
       </div>
-      <div>
+      <div >
         <div>
           {['7', '8', '9', '/'].map((item) => (
             <button key={item} onClick={() => handleClick(item)}>

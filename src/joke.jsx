@@ -33,7 +33,7 @@ function Myjoke() {
         fetchJoke();
     }, []);
     return (
-        <div style={{ padding: '20px', textAlign: 'center' }}>
+        <div style={{ padding: '20px', textAlign: 'center',borderStyle: 'solid', }}>
             <h2>Random Joke</h2>
             {loading ? <p>Loading...</p> : <p>{joke}</p>}
             <button onClick={fetchJoke}>Random</button>

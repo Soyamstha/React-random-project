@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-route
 import Calculator from './Calculator';
 import Digital_Clock from './Digital_Clock';
 import Joke from './joke';
+// import './App.css';
+import './Home.css';
 function Home() {
   const navigate = useNavigate();
 
@@ -19,9 +21,11 @@ function Home() {
   return (
     <div>
       <h1>My React Project</h1>
-      <button onClick={goToCalculator}>Go to Calculator</button>
+      <div id="button-group">
+      <button onClick={goToCalculator}>Calculator</button>
       <button onClick={goToDigital_Clock}>Digital clock</button>
       <button onClick={goToJoke}>Jokes</button>
+      </div>
     </div>
   );
 }
