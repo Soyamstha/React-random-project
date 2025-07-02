@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import './calculator.css';
+
 export default function Calculator() {
   return (
-    <div>
-      <h1>calculator</h1>
-      <MyCalcutator/>
+    <div id="calculator-container">
+      <h1 id="calculator-title">calculator</h1>
+      <MyCalcutator />
     </div>
   );
 }
+
 function MyCalcutator() {
   const [input, setInput] = useState('');
   const [result, setResult] = useState('');
@@ -29,46 +31,46 @@ function MyCalcutator() {
       setInput((prev) => prev + value);
     }
   };
+
   return (
-    <div>
-      <div class='screen'>
+    <div id="calculator-body">
+      <div className="screen" id="input-screen">
         <label>Input:</label>
-        <input value={input}></input>
+        <input value={input} id="input-field" readOnly />
       </div>
-      <div class='screen'>
+      <div className="screen" id="result-screen">
         <label>Result:</label>
-        <input value={result}></input>
+        <input value={result} id="result-field" readOnly />
       </div>
-      <div >
-        <div>
+      <div id="button-section">
+        <div className="button-row" id="row-1">
           {['7', '8', '9', '/'].map((item) => (
-            <button key={item} onClick={() => handleClick(item)}>
+            <button key={item} onClick={() => handleClick(item)} id={`btn-${item}`}>
               {item}
             </button>
           ))}
         </div>
-        <div>
-        {['4', '5', '6', '*'].map((item) => (
-          <button key={item} onClick={() => handleClick(item)}>
-            {item}
-          </button>
-        ))}
+        <div className="button-row" id="row-2">
+          {['4', '5', '6', '*'].map((item) => (
+            <button key={item} onClick={() => handleClick(item)} id={`btn-${item}`}>
+              {item}
+            </button>
+          ))}
         </div>
-        <div>
-        {['1', '2', '3', '-'].map((item) => (
-          <button key={item} onClick={() => handleClick(item)}>
-            {item}
-          </button>
-        ))}
+        <div className="button-row" id="row-3">
+          {['1', '2', '3', '-'].map((item) => (
+            <button key={item} onClick={() => handleClick(item)} id={`btn-${item}`}>
+              {item}
+            </button>
+          ))}
         </div>
       </div>
-      <div>
-        <button onClick={() => handleClick('0')}>0</button>
-        <button onClick={() => handleClick('+')}>+</button>
-        <button className="equals" onClick={() => handleClick('=')}>=</button>
-        <button className="clear" onClick={() => handleClick('Clear')}>Clear</button>
+      <div className="button-row" id="row-4">
+        <button onClick={() => handleClick('0')} id="btn-0">0</button>
+        <button onClick={() => handleClick('+')} id="btn-plus">+</button>
+        <button className="equals" onClick={() => handleClick('=')} id="btn-equals">=</button>
+        <button className="clear" onClick={() => handleClick('Clear')} id="btn-clear">Clear</button>
       </div>
     </div>
   );
 }
-
