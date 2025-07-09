@@ -4,7 +4,7 @@ import Calculator from './Calculator';
 import DigitalClock from './DigitalClock';
 import Joke from './joke';
 import Tictactoe from './Tictactoe';
-// import './App.css';
+import PaperRockScissors from './PaperRockScissors';
 import './Home.css';
 function Home() {
   const navigate = useNavigate();
@@ -21,6 +21,9 @@ function Home() {
   const goToTik = () => {
     navigate('/Tictactoe');
   };
+  const goToGame= () => {
+    navigate('/PaperRockScissors');
+  };
 
   return (
     <div>
@@ -30,6 +33,7 @@ function Home() {
       <button onClick={goToDigital_Clock}>Digital clock</button>
       <button onClick={goToJoke}>Jokes</button>
       <button onClick={goToTik}>Tic_tac_toe</button>
+      <button onClick={goToGame}>Paper Rock Scissors</button>
       </div>
     </div>
   );
@@ -44,6 +48,7 @@ function App() {
         <Route path="/DigitalClock" element={<DigitalClock />} />
         <Route path="/Joke" element={<Joke />} />
         <Route path="/Tictactoe" element={<Tictactoe />} />
+        <Route path="/PaperRockScissors" element={<PaperRockScissors />} />
       </Routes>
     </Router>
   );
